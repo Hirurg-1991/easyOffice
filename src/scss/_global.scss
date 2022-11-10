@@ -1,0 +1,79 @@
+@import "vars";
+ html,body{
+    height: 100%; 
+ }
+ body{
+
+display:flex;
+flex-direction: column;
+background-color: $bacground;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+.main{
+    flex-grow: 1;
+
+
+}
+.main--index{
+    background-image: url('../img/BG.png') ;
+    background-repeat: no-repeat;
+   // background-size: 155%;
+   background-size: 184rem;
+    background-position: 95% 0%;
+}
+
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.btn{
+    cursor: pointer;
+    text-transform:uppercase;
+    @extend %lato-700;
+    border-radius: 25px;
+    padding: 9px 20px;
+     @include adaptiv-font(14, 12);
+    line-height: 19px;
+    background-color: $haupfarbe;
+    color: $wite;      
+    white-space: nowrap;
+    border: none;
+    span {
+        margin-left: 13px;
+    }
+    path {
+        fill: $wite;
+    }
+    &:hover {
+     
+        background-color: $subtext;
+       
+    }
+}
+.subtitle{
+    text-transform: uppercase;
+    color:$subtext;
+    @extend %worksans-500;
+    @include adaptiv-font(24, 18);
+    line-height: 20px; 
+}
+.title{
+    margin-top: 24px;
+    color:$haupfarbe;
+    @extend %worksans-500;
+    @include adaptiv-font(42,28);
+    line-height: 100%;
+    text-align: center;
+
+}
+.text{
+   
+    @include adaptiv-font(16,12);
+    line-height: 100%;
+    text-align: center;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Preise"
+})
+
+<body>
+    @@include('html/header.html',{})
+    <main class="main ">
+        <section class="preise ">
+
+            <div class="preise-wrapper ">
+                <sub class="preise-wrapper__sub subtitle">INTERESSE</sub>
+                <h1 class="preise-wrapper__title title">
+                    Wir freuen uns von Ihnen zu hören
+                </h1>
+                <div class="preise-wrapper__content">
+                    <div class="preise-wrapper__right">
+                        <div class="preise-wrapper__right-img">
+                            <img src="./img/individuale-prise.png"
+                                alt="Gerne erstellen wir Ihnen ein Angebot für Ihren Bedarf">
+                        </div>
+                    </div>
+                    <div class="preise-wrapper__left">
+                        <h3 class="preise-wrapper__left-title">Wir freuen uns mit Ihnen über Ihre Herausforderungen und benötigte Lösungen zu sprechen.</h3>
+                        
+                        <div class="preise-wrapper__left-list">
+                            <span class="preise-wrapper__left-item">Sehen Sie unsere wichtigsten Funktionen in Aktion</span>
+                            <span class="preise-wrapper__left-item">Stellen Sie Ihre Fragen zu unseren Add-Ins oder</span>
+                            <span class="preise-wrapper__left-item">Beschreiben Sie Anforderungen, für welche Sie eine individuelle Lösung benötigen</span>
+                        </div>
+                        <p class="preise-wrapper__left-text">Füllen Sie das Kontaktformular unten aus oder schreiben Sie uns direkt eine E-Mail an nadja.paul@easy-slides.com.</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="priese-kontakt priese-kontakt--kontakt">
+            <div class="container">
+                <div class="kontakt-wrapper">
+                    <sub class="kontakt-wrapper__sub subtitle">Kontakt</sub>
+                    <h2 class="kontakt-wrapper__title title">
+                        Schreiben Sie uns eine Nachricht
+                    </h2>
+                    <div class="kontakt-wrapper__forms">
+                        <h3 class="kontakt-wrapper__forms-title">Kontakformular</h3>
+                        <p class="kontakt-wrapper__forms-text">Füllen Sie das Kontaktformular aus oder schreiben Sie uns direkt eine E-Mail an nadja.paul@easy-slides.com.</p>
+                       
+                        <form action="" class="kontakt-wrapper__form">
+                            <div class="kontakt-wrapper__form-items">
+                                <div class="kontakt-wrapper__form-item">
+                                    <label class="kontakt-wrapper__form-label">Vorname <span>*</span></span></label>
+                                    <input class="kontakt-wrapper__form-input" type="text" name="Vorname" id="" required>
+                                </div>
+                                <div class="kontakt-wrapper__form-item">
+                                    <label class="kontakt-wrapper__form-label">Nachname <span>*</span></span></label>
+                                    <input class="kontakt-wrapper__form-input" type="text" name="Nachname" id="" required>
+                                </div>
+                                <div class="kontakt-wrapper__form-item">
+                                    <label class="kontakt-wrapper__form-label">E-Mail Adresse <span>*</span></label>
+                                    <input class="kontakt-wrapper__form-input" type="email" name="email" id="" required>
+                                </div>
+                                <div class="kontakt-wrapper__form-item">
+                                    <label class="kontakt-wrapper__form-label">Telefonnummer</label>
+                                    <input class="kontakt-wrapper__form-input" type="tel" name="tel" id="" required>
+                                </div>
+                            </div>
+                            <div class="kontakt-wrapper__form-item">
+                                <label class="kontakt-wrapper__form-label">Nachricht</label>
+                                <textarea class="kontakt-wrapper__form-textarea" placeholder=""></textarea>
+                            </div>
+                            <div class="kontakt-wrapper__form-item__check">
+                                <label class="kontakt-wrapper__form-label__check">
+                                    <input class="kontakt-wrapper__form-checkbox" type="checkbox" />
+                                    <span></span>
+                                </label>
+                                <label class="kontakt-wrapper__form-text">Ich bestätige, dass ich die Datenschutzrichtlinie
+                                    von easySlides
+                                    gelesen habe und mit dieser einverstanden bin.
+                                </label>
+                            </div>
+                            
+                            <div class="kontakt-wrapper__form-item__bot">
+                                <button class="kontakt-wrapper__form-btn btn" type="submit">Absenden<span><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="6.069" height="10"
+                                    viewBox="0 0 6.069 10">
+                                    <path id="Icon_awesome-chevron-right" data-name="Icon awesome-chevron-right"
+                                        d="M7.841,8.036l-4.45,4.45a.55.55,0,0,1-.777,0l-.519-.519a.55.55,0,0,1,0-.776L5.62,7.648,2.093,4.1a.55.55,0,0,1,0-.776l.519-.519a.55.55,0,0,1,.777,0l4.45,4.45A.55.55,0,0,1,7.841,8.036Z"
+                                        transform="translate(-1.933 -2.648)" fill="#fff" />
+                                </svg></span></button>
+                                <label class="kontakt-wrapper__form-label"><span>*</span> Pflichtfelder
+                                </label>
+                            </div>
+                            
+                        </form>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+       
+    </main>
+    @@include('html/footer.html',{})
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

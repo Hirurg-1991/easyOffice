@@ -1,0 +1,761 @@
+@media (max-width: 1345px) {
+    .container {
+        max-width: 970px;
+    }
+    .kunden {
+        //  margin: 0 20px 0 20px;
+        &__item {
+            flex-basis: 30%;
+        }
+        &__container {
+            width: 100%;
+        }
+
+        //    .kunden__prev,.kunden__next{
+        //     display: none;
+        //    }
+        //    .swiper {
+        //     overflow: hidden;
+        // }
+    }
+}
+@media (max-width: 1190px) {
+    .container {
+        max-width: 970px;
+    }
+    .main--index {
+        background-size: 161rem;
+        background-position: 75% 2%;
+    }
+    .kunden {
+        margin: 0 20px 0 20px;
+        &__item {
+            flex-basis: 47%;
+        }
+        &__container {
+            width: 100%;
+        }
+
+        .kunden__prev,
+        .kunden__next {
+            display: none;
+        }
+        .swiper {
+            overflow: hidden;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .main--index {
+        background-size: 154rem;
+        background-position: 52% 27%;
+    }
+    .container {
+        max-width: 750px;
+    }
+    .header {
+        box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 10%);
+        min-height: 56px;
+     
+        border-bottom: none;
+        &__logo {
+            flex-basis: 70%;
+            padding: 16px 0 16px 24px;
+            border-bottom: 1px solid $bacground;
+        }
+        &__wrapper {
+            padding: 0;
+            flex-direction: column;
+        }
+        &-menu {
+            margin-right: 0px;
+            display: flex;
+            justify-content: flex-end;
+            order: 1;
+            max-height: auto;
+            position: relative;
+            &__btn {
+                cursor: pointer;
+                border: none;
+                top: 0px;
+                right: 0px;
+                background-color: transparent;
+                display: block;
+                position: absolute;
+                padding: 0;
+                z-index: 999;
+
+                &::after {
+                    content: url(../img/Icon-menu-activ.png);
+                    position: absolute;
+                    bottom: 9px;
+                    right: 0px;
+                }
+            }
+            &__btn--active {
+                position: absolute;
+                cursor: pointer;
+                right: 0px;
+                width: 19px;
+                height: 19px;
+                border: none;
+                background-color: transparent;
+                display: block;
+                transition: transform 1.8s;
+                -webkit-transition: -webkit-transform 1.8s ease-in-out;
+                -ms-transition: -ms-transform 1.8s ease-in-out;
+                top: -42px;
+                padding: 0;
+                &:hover {
+                    -moz-transform: rotate(-720deg); /* Для Firefox */
+                    -ms-transform: rotate(-720deg); /* Для IE */
+                    -webkit-transform: rotate(-720deg); /* Для Safari, Chrome, iOS */
+                    -o-transform: rotate(-720deg); /* Для Opera */
+                    transform: rotate(720deg);
+                }
+                &::after {
+                    content: url(../img/Icon-menu.png);
+                    position: absolute;
+                    width: 19px;
+                    height: 19px;
+                    right: 0px;
+                    top: 0px;
+                }
+
+                &::before {
+                    width: 0;
+                    height: 0;
+                }
+            }
+            .header-menu__list-accordeon--active + .header-menu__list-accordeon__list {
+                position: unset;
+                display: flex;
+                border-bottom: 1px solid $bacground;
+                top: 0;
+                width: 0;
+                color: $haupfarbe;
+            }
+
+            .header-menu__list-accordeon--active {
+                border-bottom: none;
+                a {
+                    color: $default-color;
+                }
+                &::after {
+                    position: absolute;
+                    content: url(../img/losungen-arrow-2.svg);
+                    width: 6px;
+                    height: 10px;
+                    position: absolute;
+                    top: 22px;
+                    left: 110px;
+                }
+            }
+            &__list-accordeon__ul {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 14px;
+            }
+            &__list-accordeon {
+                &::after {
+                    content: url(../img/losungen-arrow.svg);
+                    width: 6px;
+                    height: 10px;
+                    position: absolute;
+                    top: 22px;
+                    left: 110px;
+                }
+            }
+
+            &__list-accordeon__item {
+                margin-top: 16px;
+            }
+
+            &__list-accordeon__text {
+                display: none;
+            }
+            &__list-accordeon__link :hover {
+                color: $subtext;
+            }
+            &__list {
+                overflow: hidden;
+                opacity: 0;
+                max-height: 0;
+                display: flex;
+                width: 100%;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                left: 0;
+                z-index: 50;
+                transition: opacity 3s;
+                &.header-menu__list--active {
+                    padding: 0;
+                    max-height: 80vh;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    transition: all 0.5s;
+                    display: flex;
+                    overflow: auto;
+                    opacity: 1;
+                    transition: opacity 3s;
+                }
+            }
+
+            &__list-item {
+                padding-left: 24px;
+                width: 100%;
+                border-bottom: 1px solid $bacground;
+
+                span {
+                    left: -8px;
+                }
+                &:nth-last-child(-n + 2) {
+                    border-bottom: none;
+                }
+                &:last-child {
+                    border-bottom: none;
+                    .header-menu__list-link:nth-last-child(-n + 3) {
+                        padding-left: 0;
+                    }
+                }
+            }
+            &__list-link {
+                color: $default-color;
+                line-height: 20px;
+                z-index: 15;
+                display: block;
+                padding: 23px 0 23px 0px;
+                &:hover {
+                    border-bottom: none;
+                    color: $subtext;
+                }
+            }
+            &__list-link--kontakt {
+                color: $wite;
+                padding: 7px 39px 7px 20px;
+                width: 124px;
+                margin: 32px 0 15px 0px;
+                transition: margin-right 2s ease-in-out;
+                &:hover {
+                    color: $wite;
+                    width: 100px;
+                    transition: 2s ease-in-out;
+                }
+                &::after {
+                    content: url(../img/icons/hover-right.png);
+                    position: absolute;
+                    left: 127px;
+                    bottom: 45px;
+                }
+            }
+        }
+    }
+    .header--active {
+        box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 0%);
+        height: 100%;
+    }
+    .kunden {
+        margin: 0 20px 0 20px;
+        &__item {
+            flex-basis: 46%;
+        }
+        &__container {
+            width: 95%;
+        }
+
+        .kunden__prev,
+        .kunden__next {
+            display: none;
+        }
+        .swiper {
+            overflow: hidden;
+        }
+    }
+    //preise.html
+    .preise {
+        .preise-wrapper__content {
+            max-height: 100%;
+            flex-direction: column;
+        }
+        .preise-wrapper__left {
+            padding: 10% 20px 10% 64px;
+        }
+    }
+    .priese-kontakt {
+        .kontakt-wrapper__forms {
+            width: 70.5%;
+        }
+    }
+    //uber.html
+    .uber{
+        .uber-wrapper__left-content {           
+            width: 87.7%;           
+        }
+        .uber-wrapper__content {           
+            flex-direction: column;           
+            max-height: 100%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .main--index {
+        background-size: 237rem;
+        background-position: 52% 42%;
+    }
+    .container {
+        max-width: none;
+    }
+    .kunden {
+        margin: 0 20px 0 20px;
+        &__item {
+            flex-basis: 60%;
+        }
+        &__container {
+            width: 95%;
+        }
+
+        .kunden__prev,
+        .kunden__next {
+            display: none;
+        }
+        .swiper {
+            overflow: hidden;
+        }
+    }
+    .losungen {
+        &-wrapper {
+            padding-bottom: 50px;
+        }
+        margin: 0 20px 0 20px;
+        &__office-items {
+            flex-direction: column;
+        }
+        &__office-item {
+            margin-bottom: 32px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .beratung {
+        &-wrapper {
+            margin-right: 0;
+        }
+        margin: 0 20px 0 20px;
+        &__container-title {
+            margin-top: 7%;
+        }
+        &__title {
+            margin-top: 10px;
+        }
+        &__container {
+            flex-direction: column;
+        }
+    }
+    .footer {
+        &__wrapper {
+            margin: 0px 20px 0 20px;
+            padding: 64px 0 50px 0;
+        }
+        .footer-top__content-unternehmen {
+            display: none;
+        }
+        .footer-top__content-title {
+            margin-top: 17px;
+        }
+        .footer-bottom {
+            margin-top: 15%;
+            flex-direction: column-reverse;
+        }
+
+        .footer-top__content-adress {
+            margin-top: 0px;
+        }
+        .footer-bottom__impresum {
+            margin-top: 31px;
+        }
+        .footer-bottom__social-link:first-child {
+            margin-left: 0;
+        }
+        .footer-top__content-center {
+            width: 81%;
+            margin-top: 28px;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+        &-top {
+            flex-direction: column;
+        }
+    }
+    //product.html
+    .product {
+        .product-bottom {
+            .product-bottom__prev,
+            .product-bottom__next {
+                display: none;
+            }
+            .swiper {
+                overflow: hidden;
+            }
+        }
+    }
+    //services.html
+    .services {
+        .services-wrapper__items {
+            flex-direction: column;
+        }
+    }
+  //uber.html
+ 
+ .team{
+    .team-wrapper__container {       
+        flex-basis: 90.33%;        
+    }
+    .team-wrapper__container-item {     
+        flex-basis: 40%;   
+            
+    }
+    .team-wrapper__form-btn{
+      
+        transform: translateY(0%);
+               
+            }
+    .team-wrapper__container-item{
+        &:last-child{
+            background-image: url('../img/flieger-ol.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 230px;
+            width: 230px;
+        }
+    }
+ 
+}
+//karriere
+.career{
+    .career-wrapper__content
+     {
+        margin-top: 113px;      
+        width: 95%;
+        max-height: 100%;       
+        flex-direction: column-reverse;
+    } 
+    .career-right__content{
+        flex-direction: column;
+        margin-top: 113px;      
+        width: 95%;
+        max-height: 100%; 
+    }
+   
+    .career-wrapper__left{
+        margin-top: 50px;
+        padding: 0;
+    }
+    .career-wrapper__left-content {
+     
+        flex-direction: column;
+        width: 100%;
+    }
+    .career-wrapper__left-title,
+    .career-wrapper__left-text{
+        text-align: center;
+    }
+    
+
+ .career-wrapper__content {
+    margin-top: 113px;
+    width: 95%;
+   
+    max-height: 100%;
+    flex-direction: column-reverse;
+}
+.career-wrapper__right{
+    width: 100%;
+}
+}
+.aktuelle{
+    .aktuelle-wrapper__container {
+        margin-top: 90px;    
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .aktuelle-wrapper__container-item {
+        margin-top: 90px;
+       margin-top: 30px;
+        width: 285px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: none;
+    }
+
+    //index.html
+    .startseite {
+        margin: 0 19px 0 19px;
+        &__content {
+            flex-direction: column;
+        }
+        &__left-btn {
+            justify-content: space-around;
+        }
+        &__right-img {
+            margin-top: 60px;
+        }
+        &__content-bottom {
+            flex-direction: column;
+        }
+        &__bottom-name {
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    }
+    .vorteile {
+        &__ganz {
+            flex-direction: column;
+        }
+        &__ganz-item {
+            margin-bottom: 60px;
+        }
+        &__ganz-title {
+            text-align: center;
+        }
+        &__bottom {
+            margin-top: 9%;
+        }
+    }
+    .losungen {
+        margin: 0;
+        background-color: $haupfarbe;
+        &-wrapper {
+            padding-bottom: 50px;
+            margin: 0 20px 0 20px;
+        }
+
+        &__office-items {
+            flex-direction: column;
+        }
+        &__office-item {
+            margin-bottom: 32px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .beratung {
+        &-wrapper {
+            margin-right: 0;
+        }
+        margin: 0 20px 0 20px;
+        &__container-title {
+            margin-top: 7%;
+        }
+        &__title {
+            margin-top: 10px;
+        }
+        &__container {
+            flex-direction: column;
+        }
+    }
+    .kunden {
+        margin: 0 10px 0 10px;
+        &__item {
+            flex-basis: 58%;
+            margin: 0 5px;
+            padding: 42px 7px 29px 7px;
+        }
+        &__container {
+            width: 100%;
+        }
+
+        .kunden__prev,
+        .kunden__pagination,
+        .kunden__next {
+            display: none;
+        }
+        .swiper {
+            overflow: hidden;
+        }
+    }
+    .bedienung {
+        &-wrapper__container {
+            flex-direction: column;
+            &-title,
+            &-text {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .footer {
+        &__wrapper {
+            margin: 0px 20px 0 20px;
+            padding: 64px 0 50px 0;
+        }
+        .footer-top__content-unternehmen {
+            display: none;
+        }
+        .footer-top__content-title {
+            margin-top: 17px;
+        }
+        .footer-bottom {
+            margin-top: 15%;
+            flex-direction: column-reverse;
+        }
+
+        .footer-top__content-adress {
+            margin-top: 0px;
+        }
+        .footer-bottom__impresum {
+            margin-top: 31px;
+        }
+        .footer-bottom__social-link:first-child {
+            margin-left: 0;
+        }
+        .footer-top__content-center {
+            width: 81%;
+            margin-top: 28px;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+        &-top {
+            flex-direction: column;
+        }
+    }
+
+    .main--index {
+        background-size: 214rem;
+        background-position: 48% 19%;
+    }
+    //product.html
+    .product {
+        &-content {
+            //margin-top: 100px;
+        }
+        .product-content__header-title {
+            text-align: center;
+        }
+        .product-content__title,
+        .product-content__text {
+            text-align: center;
+        }
+        .product-content__header-text {
+            width: 100%;
+            text-align: center;
+        }
+
+        .product-content__inner-item {
+            margin-top: 60px;
+            justify-content: space-between;
+            flex-direction: column-reverse;
+        }
+        .product-person__person {
+            padding: 20% 0;
+            margin: 0px 10%;
+            flex-direction: column;
+        }
+        .product-person__person-inner {
+            margin: 53px 0;
+            align-items: center;
+        }
+        .product-person__person-title,
+        .product-person__person-text {
+            text-align: center;
+        }
+
+        //slider
+        .product-bottom {
+            .product-bottom__container {
+                width: 90%;
+            }
+            .product-bottom__prev,
+            .product-bottom__next {
+                display: none;
+            }
+            .swiper {
+                overflow: hidden;
+            }
+        }
+    }
+    //services.html
+    .services {
+        .services-wrapper__title,
+        .services-wrapper__title,
+        .services-wrapper__item-text {
+            text-align: center;
+        }
+
+        .services-wrapper__item-content {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        .services-wrapper__item-img {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+    }
+    .product-person {
+        .product-person__person {
+            padding: 20% 0;
+            margin: 0px 10%;
+            flex-direction: column;
+        }
+        .product-person__person-inner {
+            margin: 53px 0;
+            align-items: center;
+        }
+        .product-person__person-title,
+        .product-person__person-text {
+            text-align: center;
+        }
+    }
+    //preise.html
+    .preise{
+        .preise-wrapper__title{
+            margin:  20px;
+        }
+    }
+    .priese-kontakt{
+        .kontakt-wrapper__form-items {
+          
+            flex-direction: column;
+        }
+        .kontakt-wrapper__forms {
+            width: 85.5%;
+        }
+    }
+      //uber.html
+  
+    .team{
+       .team-wrapper__container { 
+        display: flex;     
+           flex-basis: 100.33%;      
+           flex-direction: column;
+           align-items: center;  
+       }
+       .team-wrapper__container-item {     
+          width: 91.5%;  
+          flex-direction: column;
+          flex-basis: 0%;
+        }    
+        .team-wrapper__form-btn{
+      
+            transform: translateY(0%);
+               margin: 90px;    
+                }
+       .team-wrapper__container-img {
+        flex-basis: 230px;       
+        height: 230px;
+        width: 230px;
+    }
+
+   }
+   
+}
